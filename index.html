@@ -839,7 +839,7 @@
     // Validar acompañantes
     if (acompanantes.value.trim() !== '') {
       const acompNum = parseInt(acompanantes.value.trim(), 10);
-      if (isNaN(acompNum) || acompNum < 0 || acompNum > 20) {
+      if (isNaN(acompNum) || acompNum < 0 || acompNum > 1000) {
         acompanantes.classList.add('is-invalid');
         valido = false;
       } else {
