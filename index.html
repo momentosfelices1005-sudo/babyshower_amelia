@@ -447,7 +447,7 @@
 
 <br><br>
       <p class="manuscrita" style="font-size: 25px;">Sé parte de este momento especial</p>  
-      <p class="manuscrita" style="font-size: 45px; color: gray; ">En mi baby shower</p>  <br>
+      <p class="manuscrita" style="font-size: 45px; color: gray; ">Baby shower</p>  <br>
       
 
       <h1 style="font-size: 32px; color: #bb79bb;">AMELIA</h1>
@@ -715,10 +715,10 @@
             </div>
           </div>
           <div class="mb-3">
-            <label for="acompanantes" class="form-label" style="font-size: 17px;">Ingresa la cantidad de personas que te acompañarán (máx. 2)</label>
-            <input type="number" class="form-control" id="acompanantes" placeholder="" min="0" max="2" style="font-size: 17px;">
+            <label for="acompanantes" class="form-label" style="font-size: 17px;">Ingresa la cantidad de personas que te acompañarán</label>
+            <input type="number" class="form-control" id="acompanantes" placeholder="" min="0" max="20" style="font-size: 17px;">
             <div class="invalid-feedback">
-              Debe ser un número entre 0 y 2.
+              Debe ser un número válido.
             </div>
           </div>
         </form>
@@ -838,7 +838,7 @@
     // Validar acompañantes
     if (acompanantes.value.trim() !== '') {
       const acompNum = parseInt(acompanantes.value.trim(), 10);
-      if (isNaN(acompNum) || acompNum < 0 || acompNum > 2) {
+      if (isNaN(acompNum) || acompNum < 0 || acompNum > 20) {
         acompanantes.classList.add('is-invalid');
         valido = false;
       } else {
@@ -851,14 +851,14 @@
     if (!valido) return;
 
     // Construir mensaje
-    let mensaje = `Hola, felicidades por su matrimonio. Confirmo mi asistencia en este día tan especial. Mi nombre es ${nombre.value.trim()}`;
+    let mensaje = `Hola, felicidades!. Confirmo mi asistencia en este día tan especial. Mi nombre es ${nombre.value.trim()}`;
     if (acompanantes.value.trim() && parseInt(acompanantes.value) > 0) {
       mensaje += ` y asistiré con ${acompanantes.value} acompañante${acompanantes.value > 1 ? 's' : ''}`;
     }else{
       mensaje += ` y asistiré sin acompañantes`;
     }
 
-    const url = `https://wa.me/593999263260?text=${encodeURIComponent(mensaje)}`;
+    const url = `https://wa.me/593991887876?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
 
     // Cerrar modal
